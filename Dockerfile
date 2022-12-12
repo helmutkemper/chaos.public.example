@@ -85,7 +85,7 @@ FROM scratch
 # (en) copy your project to the new image
 # (pt) copia o seu projeto para a nova imagem
 COPY --from=builder /app/main .
-COPY --from=builder /app/static .
+COPY --from=builder /app/static/index.html /static/index.html
 # (en) expose port 3000/tcp
 # (pt) expões a porta 3000/tcp
 EXPOSE 3000
