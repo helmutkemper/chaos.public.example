@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fs := http.FileServer(http.Dir("/go/static"))
+	fs := http.FileServer(http.Dir("/app/static"))
 	http.Handle("/", fs)
 
 	log.Print("Stating server on port 3000")
